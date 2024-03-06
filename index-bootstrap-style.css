@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "lupa";
+    src: url(font-family/Gruppo/Gruppo-Regular.ttf);
+}
+
+/*estilo de fuente general*/
+body {
+    font-family: "lupa";
+    background-image: url(imagenes-fondos/Fondo-casa2.jpg);
+    background-size: cover;
+}
+
+/*header*/
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    border-bottom: 4px outset black;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.h1-logo {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    font-weight: bolder;
+    border: 4px outset black;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    color: black;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.enlace-logo {
+    text-decoration: none;
+    color: black;
+}
+
+.container-fluid {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+/*main | grid*/
+/*el main contiene dos secciones, la segunda contiene las cards*/
+main {
+    position: relative;
+    top: 35px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 90%;
+    height: 100%;
+}
+
+.card {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+}
+
+.casas {
+    grid-area: "casas";
+    align-items: flex-start;
+}
+
+.departamentos {
+    grid-area: "dptos";
+}
+
+.quintas {
+    grid-area: "quintas";
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.card-text {
+    display: none;
+}
+
+
+
+/*estilos del footer*/
+footer {
+    position: relative;
+    top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-2 {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boton-nosotros {
+    align-self: center;
+}
+
+.nosotros-desplegable {
+    align-self: center;
+
+}
+
+/*.card {
+    
+}*/
+.conocenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: start;
+
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.propietarios a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.propietarios {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info {
+    font-weight: bolder;
+    color: black;
+}
+
+.iframe {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 300px;
+    align-self: center;
+    border-radius: 30px;
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    /*media query header*/
+    .h1-logo {
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .encabezado {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .footer-1 {
+        display: none;
+    }
+
+    .footer-2 {
+        display: flex;
+    }
+
+    .footer-2 div {
+        width: 100%;
+    }
+
+    .footer-2 div h3 {
+        width: 100%;
+
+    }
+
+    /*media query main*/
+    .cards {
+        width: 85%;
+    }
+
+    .card-text {
+        display: flex;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .encabezado {
+            height: auto;
+            gap: 50px;
+        }
+
+        .h1-logo {
+            text-align: center;
+            width: 100%;
+            height: auto;
+
+        }
+
+    }
